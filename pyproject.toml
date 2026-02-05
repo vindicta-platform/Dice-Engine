@@ -12,7 +12,7 @@ requires-python = ">=3.10"
 dependencies = []
 
 [project.optional-dependencies]
-dev = ["pytest>=8.0", "ruff>=0.4", "pre-commit>=3.7"]
+dev = ["pytest>=9.0.2", "ruff>=0.4", "pre-commit>=3.7"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/dice_engine"]
@@ -20,8 +20,3 @@ packages = ["src/dice_engine"]
 [tool.ruff]
 line-length = 88
 target-version = "py310"
-
-[dependency-groups]
-dev = [
-    "pytest>=9.0.2",
-]
