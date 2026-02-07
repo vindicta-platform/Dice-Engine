@@ -1,11 +1,11 @@
 # Feature Proposal: Dice Roll Replay & Verification
 
-**Proposal ID**: FEAT-007  
-**Author**: Unified Product Architect (Autonomous)  
-**Created**: 2026-02-01  
-**Status**: Draft  
-**Priority**: High  
-**Target Repository**: Dice-Engine  
+**Proposal ID**: FEAT-007
+**Author**: Unified Product Architect (Autonomous)
+**Created**: 2026-02-01
+**Status**: Draft
+**Priority**: High
+**Target Repository**: Dice-Engine
 
 ---
 
@@ -81,13 +81,13 @@ class RollProof:
     seed_reveal: str           # Actual seed (revealed after roll)
     entropy_used: bytes        # Raw entropy consumed
     signature: str             # HMAC of above fields
-    
+
 class DiceVerifier:
     """Verify the integrity of past rolls."""
-    
+
     def verify(self, proof: RollProof) -> VerificationResult:
         """Verify a roll proof is valid and untampered."""
-        
+
     def replay(self, seed: str, dice_notation: str) -> list[int]:
         """Replay a roll with known seed."""
 ```
@@ -113,18 +113,18 @@ For tournament-critical rolls:
 ### User Stories
 
 #### US-001: Verify Past Roll
-**As a** tournament player  
-**I want to** verify that a critical roll was fair  
+**As a** tournament player
+**I want to** verify that a critical roll was fair
 **So that** I can trust the platform's randomness
 
 #### US-002: Replay Roll Sequence
-**As a** dispute resolver  
-**I want to** replay a contested roll sequence  
+**As a** dispute resolver
+**I want to** replay a contested roll sequence
 **So that** I can confirm or refute a player's claim
 
 #### US-003: Export Roll Proof
-**As a** content creator  
-**I want to** export verifiable roll proofs  
+**As a** content creator
+**I want to** export verifiable roll proofs
 **So that** my audience can trust my battle reports
 
 ### Acceptance Criteria
